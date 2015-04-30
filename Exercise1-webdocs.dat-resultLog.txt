@@ -1,0 +1,58 @@
+/usr/bin/python2.7 /home/gio/PycharmProjects/apriori.py
+- - - SIMPLE APRIORI ALGORITHM EXECUTION - - -
+[Non-randomized apriori] 22 frequent itemsets of size: 1
+[Non-randomized apriori] 65 frequent itemsets of size: 2
+[Non-randomized apriori] 64 frequent itemsets of size: 3
+[Non-randomized apriori] 29 frequent itemsets of size: 4
+[Non-randomized apriori] 6 frequent itemsets of size: 5
+[Non-randomized apriori] 0 frequent itemsets of size: 6
+Total time elapsed, non-randomized a-priori: 1846.98192501
+
+
+- - - RANDOMIZED APRIORI ALGORITHM EXECUTION - - -
+
+STEP 1: original threshold t * p
+
+[Randomized apriori] 21 frequent itemsets of size: 1
+[Randomized apriori] 55 frequent itemsets of size: 2
+[Randomized apriori] 60 frequent itemsets of size: 3
+[Randomized apriori] 28 frequent itemsets of size: 4
+[Randomized apriori] 5 frequent itemsets of size: 5
+[Randomized apriori] 0 frequent itemsets of size: 6
+
+
+False-positives elimination:
+Apriori randomized without FP contains: 149 elements:
+[Randomized apriori without FP] 19 elements of size: 1
+[Randomized apriori without FP] 50 elements of size: 2
+[Randomized apriori without FP] 53 elements of size: 3
+[Randomized apriori without FP] 26 elements of size: 4
+[Randomized apriori without FP] 1 elements of size: 5
+37 false negatives have been detected.
+
+Total time elapsed, randomized a-priori (with false positive elimination): 217.283941031
+
+STEP 2: false negatives reduction, 0.9 * p * t
+
+[Randomized apriori] 22 frequent itemsets of size: 1
+[Randomized apriori] 61 frequent itemsets of size: 2
+[Randomized apriori] 67 frequent itemsets of size: 3
+[Randomized apriori] 34 frequent itemsets of size: 4
+[Randomized apriori] 6 frequent itemsets of size: 5
+[Randomized apriori] 0 frequent itemsets of size: 6
+
+
+False-positives elimination:
+Apriori randomized without FP contains: 160 elements:
+[Randomized apriori without FP] 21 elements of size: 1
+[Randomized apriori without FP] 55 elements of size: 2
+[Randomized apriori without FP] 55 elements of size: 3
+[Randomized apriori without FP] 25 elements of size: 4
+[Randomized apriori without FP] 4 elements of size: 5
+26 false negatives have been detected.
+
+Total time elapsed, randomized a-priori (with FP elimination AND FN reduction): 375.725332975
+
+Check on correctness of results (if results of apriori randomized without FP are the contained in normal apriori): PASSED
+
+Process finished with exit code 0

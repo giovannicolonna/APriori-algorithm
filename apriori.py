@@ -40,9 +40,9 @@ def toSet(file):
 
 print ("- - - SIMPLE APRIORI ALGORITHM EXECUTION - - -")
 
-THRESHOLD = 500   #500 for retail.dat, 500.000 for webdocs
-PROBABILITY = 0.1   #0.1 for retail.dat, 0.0001 for webdocs
-INPUT = "retail.dat"   #select between retail.dat and webdocs.dat
+THRESHOLD = 500000   #500 for retail.dat, 500.000 for webdocs
+PROBABILITY = 0.0001   #0.1 for retail.dat, 0.0001 for webdocs
+INPUT = "webdocs.dat"   #select between retail.dat and webdocs.dat
 START = time.time()
 
 currentDict = {}
