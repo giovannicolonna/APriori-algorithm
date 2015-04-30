@@ -1,0 +1,50 @@
+- - - SIMPLE APRIORI ALGORITHM EXECUTION - - -
+[Non-randomized apriori] 185 frequent itemsets of size: 1
+[Non-randomized apriori] 191 frequent itemsets of size: 2
+[Non-randomized apriori] 79 frequent itemsets of size: 3
+[Non-randomized apriori] 13 frequent itemsets of size: 4
+[Non-randomized apriori] 0 frequent itemsets of size: 5
+Total time elapsed, non-randomized a-priori: 6.28385877609
+
+
+- - - RANDOMIZED APRIORI ALGORITHM EXECUTION - - -
+
+STEP 1: original threshold t * p
+
+[Randomized apriori] 183 frequent itemsets of size: 1
+[Randomized apriori] 196 frequent itemsets of size: 2
+[Randomized apriori] 70 frequent itemsets of size: 3
+[Randomized apriori] 13 frequent itemsets of size: 4
+[Randomized apriori] 0 frequent itemsets of size: 5
+
+
+False-positives elimination:
+Apriori randomized without FP contains: 363 elements:
+[Randomized apriori without FP] 166 elements of size: 1
+[Randomized apriori without FP] 140 elements of size: 2
+[Randomized apriori without FP] 50 elements of size: 3
+[Randomized apriori without FP] 7 elements of size: 4
+105 false negatives have been detected.
+
+Total time elapsed, randomized a-priori (with false positive elimination): 1.54156899452
+
+STEP 2: false negatives reduction, 0.9 * p * t
+
+[Randomized apriori] 234 frequent itemsets of size: 1
+[Randomized apriori] 246 frequent itemsets of size: 2
+[Randomized apriori] 104 frequent itemsets of size: 3
+[Randomized apriori] 17 frequent itemsets of size: 4
+[Randomized apriori] 0 frequent itemsets of size: 5
+
+
+False-positives elimination:
+Apriori randomized without FP contains: 391 elements:
+[Randomized apriori without FP] 184 elements of size: 1
+[Randomized apriori without FP] 144 elements of size: 2
+[Randomized apriori without FP] 56 elements of size: 3
+[Randomized apriori without FP] 7 elements of size: 4
+77 false negatives have been detected.
+
+Total time elapsed, randomized a-priori (with FP elimination AND FN reduction): 1.92814517021
+
+Check on correctness of results (if results of apriori randomized without FP are the contained in normal apriori): PASSED

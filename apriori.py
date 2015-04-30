@@ -135,12 +135,12 @@ output.close()
 #
 
 
-#2 steps: one analysis with pr and one with 0.8pr
+#2 steps: one analysis with tpr and one with 0.9tpr
 
 print "- - - RANDOMIZED APRIORI ALGORITHM EXECUTION - - -\n"
 MAX_K = 0
 step = 1
-while step<3:
+while step<3: #two steps
     START = time.time()
 
     if step==1:
@@ -156,7 +156,7 @@ while step<3:
     dataset = defaultdict(int)
     f = open(INPUT,"r")
     output2 = open("outputRandomized.dat","w")
-    #temp = open("temp.dat","w")
+
     index=0
     for line in f:
         p = random.random()
@@ -167,16 +167,12 @@ while step<3:
                 currbasket.append(elem)
             dataset[index]=currbasket
             index=index+1
-    #temp.close()
-
-    ###from now the code is exactly equal to the prevoius case, except for output file
-
 
 
     currentDict = {}
     randResDict = {}
     filterset = {}
-    #temp = open("temp.dat","r")
+
     #first iteration, i set up singles elements
     for line in dataset:
         for item in dataset[line]:
@@ -251,12 +247,8 @@ while step<3:
 
 
 
-
-
-
     print "\n"
 
-    #temp.close()
     output2.close()
 
 
@@ -269,9 +261,10 @@ while step<3:
     falsepositivescount = 0  #conta il numero di falsi positivi
     falsenegativescount = 0  #conta il numero di falsi negativi
     falsepositive = []  #array che conterra' i falsi positivi per eliminarli dal risultato
+
     fpDict = {} #dizionario degli itemsets letti da file per la verifica dei FP
 
-    randomMatrix = {}
+    randomMatrix = {} #mappa che contiene i risultati del random divisi per lunghezza
 
     for res in randResDict:
         if isinstance(res,tuple):
@@ -314,15 +307,24 @@ while step<3:
 
     f.close()
 
-
     finalResult = {}
 
     for item in fpDict:
         if fpDict[item]>=THRESHOLD:
             finalResult[item] = fpDict[item]
 
-    print "Apriori without FP has found: "+str(len(finalResult))+" elements."
+    print "Apriori randomized without FP contains: "+str(len(finalResult))+" elements:"
 
+    #print of results without fp
+    toPrint = defaultdict(int)
+    for elem in finalResult:
+        if not isinstance(elem,tuple):
+            toPrint[1] += 1
+        else:
+            toPrint[len(elem)] += 1
+
+    for k in range(1,len(toPrint)+1):
+        print "[Randomized apriori without FP] "+str(toPrint[k])+" elements of size: " + str(k)
 
     output3 = open("outputRandomizedWithoutFP.dat","w")
 
