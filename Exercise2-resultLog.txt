@@ -1,0 +1,140 @@
+/usr/bin/python2.7 /home/gio/PycharmProjects/exercise2.py
+TEST NUMBER 0
+- Counting single items appearing over the expected value + 10%
+Total single items: 22
+Average: 558.954545455
+
+
+- Counting couples which are more frequent than 5 times the EV
+Couple: (283, 574) appears: 13 times.
+Couple: (64, 1970) appears: 13 times.
+Couple: (1767, 1717) appears: 14 times.
+There are in this test 3 most-frequent couples
+Average interestingness of these frequent couples is: 0.0213634709758
+
+
+TEST NUMBER 1
+- Counting single items appearing over the expected value + 10%
+Total single items: 22
+Average: 557.045454545
+
+
+- Counting couples which are more frequent than 5 times the EV
+Couple: (34, 292) appears: 13 times.
+There are in this test 1 most-frequent couples
+Average interestingness of these frequent couples is: 0.0211665889081
+
+
+TEST NUMBER 2
+- Counting single items appearing over the expected value + 10%
+Total single items: 18
+Average: 557.722222222
+
+
+- Counting couples which are more frequent than 5 times the EV
+Couple: (172, 271) appears: 13 times.
+Couple: (1155, 1923) appears: 14 times.
+Couple: (1504, 860) appears: 13 times.
+There are in this test 3 most-frequent couples
+Average interestingness of these frequent couples is: 0.021052891034
+
+
+TEST NUMBER 3
+- Counting single items appearing over the expected value + 10%
+Total single items: 20
+Average: 562.1
+
+
+- Counting couples which are more frequent than 5 times the EV
+Couple: (176, 1630) appears: 13 times.
+There are in this test 1 most-frequent couples
+Average interestingness of these frequent couples is: 0.0217003158881
+
+
+TEST NUMBER 4
+- Counting single items appearing over the expected value + 10%
+Total single items: 34
+Average: 559.0
+
+
+- Counting couples which are more frequent than 5 times the EV
+Couple: (1036, 1183) appears: 13 times.
+Couple: (1542, 1682) appears: 13 times.
+Couple: (1636, 1401) appears: 13 times.
+There are in this test 3 most-frequent couples
+Average interestingness of these frequent couples is: 0.0203524846717
+
+
+TEST NUMBER 5
+- Counting single items appearing over the expected value + 10%
+Total single items: 16
+Average: 556.6875
+
+
+- Counting couples which are more frequent than 5 times the EV
+Couple: (128, 1085) appears: 13 times.
+Couple: (288, 662) appears: 13 times.
+Couple: (1164, 240) appears: 14 times.
+Couple: (65, 742) appears: 13 times.
+Couple: (1367, 762) appears: 13 times.
+Couple: (866, 817) appears: 14 times.
+There are in this test 6 most-frequent couples
+Average interestingness of these frequent couples is: 0.0213006165372
+
+
+TEST NUMBER 6
+- Counting single items appearing over the expected value + 10%
+Total single items: 30
+Average: 558.933333333
+
+
+- Counting couples which are more frequent than 5 times the EV
+Couple: (154, 31) appears: 13 times.
+Couple: (388, 1252) appears: 13 times.
+There are in this test 2 most-frequent couples
+Average interestingness of these frequent couples is: 0.0196516071864
+
+
+TEST NUMBER 7
+- Counting single items appearing over the expected value + 10%
+Total single items: 31
+Average: 559.290322581
+
+
+- Counting couples which are more frequent than 5 times the EV
+Couple: (493, 498) appears: 13 times.
+Couple: (1827, 886) appears: 13 times.
+There are in this test 2 most-frequent couples
+Average interestingness of these frequent couples is: 0.0201873386249
+
+
+TEST NUMBER 8
+- Counting single items appearing over the expected value + 10%
+Total single items: 26
+Average: 560.115384615
+
+
+- Counting couples which are more frequent than 5 times the EV
+Couple: (681, 439) appears: 13 times.
+Couple: (518, 1241) appears: 13 times.
+There are in this test 2 most-frequent couples
+Average interestingness of these frequent couples is: 0.0202016558158
+
+
+TEST NUMBER 9
+- Counting single items appearing over the expected value + 10%
+Total single items: 22
+Average: 560.318181818
+
+
+- Counting couples which are more frequent than 5 times the EV
+Couple: (1579, 1135) appears: 13 times.
+There are in this test 1 most-frequent couples
+Average interestingness of these frequent couples is: 0.0205786379755
+
+
+FINAL RESULTS: average number of single elements above EV+10%: 24.1
+Average number of couples above 5 times the EV: 2.4
+Total time of testing:356.696141958
+
+Process finished with exit code 0

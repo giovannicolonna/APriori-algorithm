@@ -80,24 +80,24 @@ while trialnumber<10:
     print "There are in this test "+str(countfreqcouples)+" most-frequent couples"
 
     resultcouples.append(float(countfreqcouples))
-
-    #CALCULATE INTERESTINGNESS OF CURRENT FREQUENT COUPLES
-    interestingnesses = []
-    for couple in mapOfFrequents:
-        if isinstance(couple,tuple):
-            A = couple[0]
-            B = couple[1]
-            supAandB = mapOfFrequents[couple]
-            supA = mapOfFrequents[couple[0]]
-            supB = mapOfFrequents[B]
-            m = 100000
-            intAtoB = float(float(supAandB)/float(supA) - float(supB)/float(m))
-            intBtoA = float(float(supAandB)/float(supB) - float(supA)/float(m))
-            interestingnesses.append(intAtoB)
-            interestingnesses.append(intBtoA)
-    avgInt = float(sum(interestingnesses))/len(interestingnesses)
-    print "Average interestingness of these frequent couples is: " + str(avgInt)
-    print "\n"
+    if countfreqcouples>0:
+        #CALCULATE INTERESTINGNESS OF CURRENT FREQUENT COUPLES
+        interestingnesses = []
+        for couple in mapOfFrequents:
+            if isinstance(couple,tuple):
+                A = couple[0]
+                B = couple[1]
+                supAandB = mapOfFrequents[couple]
+                supA = mapOfFrequents[couple[0]]
+                supB = mapOfFrequents[B]
+                m = 100000
+                intAtoB = float(float(supAandB)/float(supA) - float(supB)/float(m))
+                intBtoA = float(float(supAandB)/float(supB) - float(supA)/float(m))
+                interestingnesses.append(intAtoB)
+                interestingnesses.append(intBtoA)
+        avgInt = float(sum(interestingnesses))/len(interestingnesses)
+        print "Average interestingness of these frequent couples is: " + str(avgInt)
+        print "\n"
     trialnumber=trialnumber+1
 END = time.time()
 print "FINAL RESULTS: average number of single elements above EV+10%: "+str((float(sum(resultsingles)))/10)
